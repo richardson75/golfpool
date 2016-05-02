@@ -14,6 +14,7 @@ This hits the website *http://www.golfstats.com/* to pull in the results for a s
 ```python
 scrapy crawl golfstats_results -a start_url="http://www.golfstats.com/search/?yr=2016&tournament=Masters&player=&tour=Majors&submit=go" -a tourn_id=201601
 ```
+
 ```python
 scrapy crawl golfstats_results -a start_url="http://www.golfstats.com/search/?yr=2015&tournament=U.S.+Open&player=&tour=Majors&submit=go" -a tourn_id=201502
 ```
