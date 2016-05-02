@@ -21,7 +21,7 @@ and puts the tourn_id as 201601.
 This spider writes to the table LOAD_RESULTS in a MySQL database
 
 ##rank3
-This hits http://www.owgr.com/en/Ranking.aspx, the start_urls are defined in the spider
+This hits *http://www.owgr.com/en/Ranking.aspx*, the start_urls are defined in the spider
 
 ### Here is how you call 
 scrapy crawl rank3 -a tourn_id=201601
