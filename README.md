@@ -1,5 +1,5 @@
-# golfpool
-This is a repository for the golfpool learning project
+# Chris's Golf Pool Project
+This is a repository for the golfpool learning project I've created to learn more about Python, git, MySQL, Google Cloud, and Google Docs API.
 
 ##Background
 A freind of my runs a golf pool where you pick 8-9 players for each of the 4 major golf tournaments. Your team competes against others based on how much money your players win in aggregate for the tournament. The goal of this project is to automate this contest and eventually make it so there can be real time updates.  
