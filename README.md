@@ -1,32 +1,21 @@
 # golfpool
-This is a repository for the golfpool project
+This is a repository for the golfpool learning project
 
+##Background
+A freind of my runs a golf pool where you pick 8-9 players for each of the 4 major golf tournaments. Your team competes against others based on how much money your players win in aggregate for the tournament. The goal of this project is to automate this contest and eventually make it so there can be real time updates.  
 ##About the project
-The project scrapes data from two different websites and writes the data back into a MySQL database
+The project scrapes data from two different websites and writes the data back into a MySQL database hosted on Google Cloud. There is also an integration with Google Sheets and Google Forms to collect the picks.
 
-The scraping is done using Scrapy here are some details on the two spiders:
+The scraping is done using [Scrapy](http://doc.scrapy.org/en/latest/intro/tutorial.html) a python library. 
 
-##golfstats_results
-This hits the website *http://www.golfstats.com/* to pull in the results for a tournement
+Scarpy Architecture:
+![](http://doc.scrapy.org/en/latest/_images/scrapy_architecture.png)
 
-The location where the sprider will crawl defined by the start_url passed in as an argument a var for the trournament (tourn_id) is also passed in and written to the database.
+In this project I have two diffent spiders: 
+1. one to pull the tounament results
+2. one to pull the offical world golf rankings
 
-### Here is how you call the spider:
-scrapy crawl golfstats_results -a start_url="http://www.golfstats.com/search/?yr=2016&tournament=Masters&player=&tour=Majors&submit=go" -a tourn_id=201601
-
-This crawls the 2016 masters results:
-	http://www.golfstats.com/search/?yr=2016&tournament=Masters&player=&tour=Majors&submit=go
-and puts the tourn_id as 201601. 
-
-This spider writes to the table LOAD_RESULTS in a MySQL database
-
-##rank3
-This hits *http://www.owgr.com/en/Ranking.aspx*, the start_urls are defined in the spider
-
-### Here is how you call 
-scrapy crawl rank3 -a tourn_id=201601
-
-This spider uses a pipeline to write to LOAD_RANK in the MySQL database
+More details about the spiders and the project can be found in the [GettingStarted](https://github.com/richardson75/golfpool/blob/master/GettingStarted.md) file.
 
 
 
