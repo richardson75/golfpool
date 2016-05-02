@@ -8,12 +8,11 @@ The project scrapes data from two different websites and writes the data back in
 
 The scraping is done using [Scrapy](http://doc.scrapy.org/en/latest/intro/tutorial.html) a python library. 
 
-Scarpy Architecture:
-![](http://doc.scrapy.org/en/latest/_images/scrapy_architecture.png)
+![Scarpy Architecture:](http://doc.scrapy.org/en/latest/_images/scrapy_architecture.png)
 
 In this project I have two diffent spiders: 
-1. one to pull the tounament results
-2. one to pull the offical world golf rankings
+1. one to pull the tounament results (GolfStats_results.py)
+2. one to pull the offical world golf rankings (rank3.py)
 
 More details about the spiders and the project can be found in the [GettingStarted](https://github.com/richardson75/golfpool/blob/master/GettingStarted.md) file.
 
